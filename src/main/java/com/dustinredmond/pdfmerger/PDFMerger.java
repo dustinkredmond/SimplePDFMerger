@@ -49,7 +49,7 @@ public class PDFMerger extends Application {
         // Setup spacing (gap) and padding for our GridPane
         grid.setVgap(5);
         grid.setHgap(5);
-        grid.setPadding(new Insets(10, 10, 10,10));
+        grid.setPadding(new Insets(10));
 
         Button buttonAdd = new Button("Add PDF");
         Button buttonRemove = new Button("Remove PDF");
