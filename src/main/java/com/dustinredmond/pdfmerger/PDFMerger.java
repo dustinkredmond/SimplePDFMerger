@@ -221,11 +221,7 @@ public class PDFMerger extends Application {
     private File getFile(boolean open) {
         FileChooser fc = new FileChooser();
         fc.getExtensionFilters().add(new FileChooser.ExtensionFilter("PDF Files", "*.pdf"));
-        if (open) {
-            return fc.showOpenDialog(null);
-        } else {
-            return fc.showSaveDialog(null);
-        }
+        return open ? fc.showOpenDialog(null) : fc.showSaveDialog(null);
     }
 
     /**
