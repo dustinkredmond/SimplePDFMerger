@@ -76,12 +76,24 @@ public class PDFMerger extends Application {
         GridPane.setVgrow(listView, Priority.ALWAYS);
         GridPane.setHgrow(listView, Priority.ALWAYS);
 
+        buttonMerge.setDisable(true); // can't do merge or remove without PDFs
+        buttonRemove.setDisable(true);
+
         // Wire up the actions for our buttons
-        buttonAdd.setOnAction(e -> handleAdd(listView));
-        buttonRemove.setOnAction(e -> handleRemove(listView));
+        buttonAdd.setOnAction(e -> {
+            handleAdd(listView);
+            buttonMerge.setDisable(listView.getItems().size() < 2);
+            buttonRemove.setDisable(listView.getItems().size() == 0);
+        });
+        buttonRemove.setOnAction(e -> {
+            handleRemove(listView);
+            buttonMerge.setDisable(listView.getItems().size() < 2);
+            buttonRemove.setDisable(listView.getItems().size() == 0);
+        });
         buttonMerge.setOnAction(e -> {
             try {
                 handleMerge(listView);
+                buttonMerge.setDisable(true);
             } catch (IOException ioException) {
                 alert("Unable to merge the PDF documents. Ensure " +
                         "that all files are readable, and that you have enough" +
