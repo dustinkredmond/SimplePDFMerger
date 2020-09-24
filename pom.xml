@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.dustinredmond.pdfmerger</groupId>
-    <artifactId>PDFMerger</artifactId>
-    <version>1.0.1-RELEASE</version>
+    <artifactId>SimplePDFMerger</artifactId>
+    <version>1.1.0-RELEASE</version>
     <url>https://github.com/dustinkredmond/SimplePDFMerger</url>
     <build>
         <plugins>
@@ -28,7 +28,7 @@
                     <appendAssemblyId>false</appendAssemblyId>
                     <archive>
                         <manifest>
-                            <mainClass>com.dustinredmond.pdfmerger.PDFMerger</mainClass>
+                            <mainClass>com.dustinredmond.pdfmerger.SimplePDFMerger</mainClass>
                             <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
                             <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
                         </manifest>

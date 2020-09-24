@@ -24,7 +24,7 @@ import java.time.LocalDate;
  * A lightweight JavaFX application to facilitate in merging
  * multiple PDF documents into one.
  */
-public class PDFMerger extends Application {
+public class SimplePDFMerger extends Application {
 
     @SuppressWarnings("RedundantThrows")
     public void start(Stage stage) throws Exception {
